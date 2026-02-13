@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>count+-</title>
+
+    <style>
+        /*body{
+            display: flex;
+            justify-content: center;
+            margin-top: 16%;
+        }*/
+
+        #contain{
+            width: 220px;
+            height: 160px;
+            /*border: solid grey;*/
+            margin-left: 30px;
+            border-radius: 4px; 
+            box-shadow: 0 8px 16px rgb(74, 73, 73);
+        }
+        #rect{
+            width: 280px;
+            height: 350px;
+           /* border: solid black;*/
+            border-radius: 4px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,1.0);
+
+            margin-left: 10%;
+            margin-top: 8%;
+        }
+        @media (max-width:500px){
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="rect">
+    <h3 style="text-align: center;">count +-</h3>
+     <div id="contain">
+        <img src="">
+     </div>
+    
+    <h3 id="">item name:</h3>
+    <h3 id="multiply">price:<span id="">450</span></h3>
+     
+    <button id="increase" style="background-color: green;">add</button>
+    <button id="decrease" style="background-color: red;">delete</button>
+    
+    <button id="appear">1</button>
+
+
+    </div>
+    <script>
+
+        let variable=document.getElementById('appear')
+        let variable1=document.getElementById('increase')
+        let variable2=document.getElementById('decrease')
+        let variable3=document.getElementById("multiply")
+        let count=1;
+
+        variable2.disabled=(count===1)
+        
+        variable1.addEventListener('click',()=>{
+            count++
+            variable.textContent=count
+            variable3.textContent=`price:${450*count}`
+             variable2.disabled=(count===1)
+        })
+
+        
+        variable2.addEventListener('click',()=>{
+            count--
+            variable.textContent=count
+             variable3.textContent=`price:${450*count}`
+             if(variable.textContent===0){
+                variable3.textContent=variable3
+             }
+             variable2.disabled=(count===1)
+            
+
+        })
+
+        
+
+       
+
+        
+    </script>
+</body>
+</html>
